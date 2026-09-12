@@ -1,0 +1,77 @@
+name: Add a paper
+description: Suggest a paper, framework, benchmark, or dataset for the list
+title: "[Paper] "
+labels: ["new-entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Please fill in as much as you can — the title and link are the only required fields.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The paper's exact official title.
+      placeholder: "OpenVLA: An Open-Source Vision-Language-Action Model"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Canonical link — arXiv `abs` page preferred. Please open it and confirm it points at the right paper.
+      placeholder: "https://arxiv.org/abs/2406.09246"
+    validations:
+      required: true
+  - type: input
+    id: authors
+    attributes:
+      label: Authors
+      placeholder: "Moo Jin Kim, Karl Pertsch, Siddharth Karamcheti, et al."
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+      placeholder: "CoRL 2024"
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Application domain
+      options:
+        - Text-Only Foundations
+        - Robotics & Physical Embodiment
+        - GUI & Web Navigation
+        - Multimedia Content Generation & Editing
+        - Long-Form Video Understanding & Retrieval
+        - Benchmark / Dataset
+        - Other / Not sure
+  - type: dropdown
+    id: fusion
+    attributes:
+      label: Perception fusion strategy
+      description: How does the framework get non-text input into its reasoning backbone?
+      options:
+        - Delegated (tool calls convert modalities to text)
+        - Late-fusion (modality encoders project into the LM embedding space)
+        - Early-fusion (raw multimodal tokens, native)
+        - Not applicable / Not sure
+  - type: input
+    id: modality
+    attributes:
+      label: Modalities
+      placeholder: "image, video, audio, GUI screenshots"
+  - type: input
+    id: code
+    attributes:
+      label: Code repository
+      placeholder: "https://github.com/openvla/openvla"
+  - type: input
+    id: project
+    attributes:
+      label: Project page
+      placeholder: "https://openvla.github.io/"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Why does this belong on the list? Anything notable about where it fits in the taxonomy?
