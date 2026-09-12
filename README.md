@@ -823,7 +823,7 @@ This repository is maintained by the authors of *A Survey on Foundations and Fro
 
 <p align="center">
   <a href="https://github.com/rishieraj/awesome-multimodal-agents/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=rishieraj/awesome-multimodal-agents" alt="Contributors" />
+    <img src="https://contrib.rocks/image?repo=rishieraj/awesome-multimodal-agents&anon=0" alt="Contributors" />
   </a>
 </p>
 
